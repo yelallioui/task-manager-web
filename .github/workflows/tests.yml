@@ -1,9 +1,22 @@
 name: Tests
+
 on: 
   push:
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps: 
-      - name: Dire bonjour
-        run: echo "bonjour, Ici la CI de Task Manager"
+      - name: Récupérer le code
+        use: actions/checkout@v7
+
+      - name: Préparer Node.js 
+        use: actions/setup-node@v7
+        with: 
+          node-version: 24
+
+      - name: Installer les dépendances
+        run: npm install 
+
+      - name: Lancer les tests 
+        run: npm test
