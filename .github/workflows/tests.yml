@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Dire bonjour
-      run: echo "bonjour, Ici la CI de Task Manager"
+        run: echo "bonjour, Ici la CI de Task Manager"
