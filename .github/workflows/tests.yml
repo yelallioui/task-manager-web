@@ -20,10 +20,12 @@ jobs:
 
       - name: Lancer les tests 
         run: npm test
+
       - name: Construire l'application
         run: npm run build
+        
       - name: Concerver l'artefact
-        uses: actions/upload-artefact@v7
+        uses: actions/upload-artifact@v7
         with:
           name: task-manager-web
           path: dist/
